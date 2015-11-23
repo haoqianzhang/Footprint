@@ -59,7 +59,7 @@
 - (IBAction)addSubviewAction:(UIButton *)sender {
     
 
-    HKSubViewController *subVC = [self.storyboard instantiateViewControllerWithIdentifier:@"HKSubViewController"];
+    HKSubViewController *subVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SubViewController"];
     [self.navigationController pushViewController:subVC animated:YES];
 }
 

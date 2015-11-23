@@ -42,7 +42,7 @@
     navMain = (HKRotationNavigationController*)[mainStoryboard instantiateViewControllerWithIdentifier: @"HKMainNavController"];
     self.slideMenuVC.mainViewController = navMain;
     
-    self.slideMenuVC.backgroundImage = [UIImage imageNamed:@"white.png"];
+    self.slideMenuVC.backgroundImage = [UIImage imageNamed:@"dark.png"];
     self.slideMenuVC.backgroundImageContentMode = UIViewContentModeScaleToFill;
     self.slideMenuVC.enablePan = NO;
     

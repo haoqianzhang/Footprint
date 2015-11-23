@@ -59,12 +59,9 @@
     }
     
     cell.textLabel.text = [titles objectAtIndex:indexPath.row];
-    cell.textLabel.textColor = [UIColor blackColor];    //设置选项颜色
     UIFont *currentFont = cell.textLabel.font;
-    UIFont *correctFont = [UIFont fontWithName:currentFont.fontName size:currentFont.pointSize+5 ];
-    
+    UIFont *correctFont = [UIFont fontWithName:@"ChalkboardSE-Regular" size:currentFont.pointSize+5 ];
     cell.textLabel.font = correctFont;
-    
     cell.textLabel.textColor = [UIColor whiteColor];
     cell.imageView.image = [UIImage imageNamed:[images objectAtIndex:indexPath.row]];
     cell.contentView.backgroundColor = [UIColor clearColor];
