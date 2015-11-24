@@ -98,11 +98,11 @@ class SubViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDe
     }*/
 
    
-    func longPressed (gestureRecognizer:UIGestureRecognizer){
+    /*func longPressed (gestureRecognizer:UIGestureRecognizer){
         if(gestureRecognizer.state == UIGestureRecognizerStateBegan) { //该状态在swift中不可用？？
             contextSheet.startWithGestureRecognizer(inview:self.theMap) //如何引用contextsheet？
         }
-    }
+    }*/
     /*- (void) longPressed: (UIGestureRecognizer *) gestureRecognizer {
     if(gestureRecognizer.state == UIGestureRecognizerStateBegan) {
     
