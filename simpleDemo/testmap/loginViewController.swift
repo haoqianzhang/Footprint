@@ -17,6 +17,8 @@ class loginViewController: UIViewController {
     @IBOutlet weak var passwordField:   UITextField!
     @IBOutlet weak var loginButton:     UIButton!
     
+    var user = userManager()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,9 +48,6 @@ class loginViewController: UIViewController {
         self.loginButton(false)
         
     }
-    
-    
-    
     
     func loginButton(enabled: Bool) -> () {
         func enable(){
@@ -84,7 +83,8 @@ class loginViewController: UIViewController {
     }
     
     @IBAction func buttonPressed(sender: AnyObject) {
-        self.performSegueWithIdentifier("login", sender: self)
+        print(user.login("123", password: "345"))
+        //self.performSegueWithIdentifier("login", sender: self)
     }
     
     @IBAction func signupPressed(sender: AnyObject) {
@@ -96,8 +96,6 @@ class loginViewController: UIViewController {
         passwordField.resignFirstResponder()
         
     }
-    
-    
 }
 
 //Extension for Color to take Hex Values
