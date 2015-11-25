@@ -21,6 +21,8 @@ class userManager : NSObject
         
         let paramString = "data=Hello"
         request.HTTPBody = paramString.dataUsingEncoding(NSUTF8StringEncoding)
+        let semaphore = dispatch_semaphore_create(0)
+        var success : Int = 0
         
         let task = session.dataTaskWithRequest(request) {
             (
@@ -32,41 +34,51 @@ class userManager : NSObject
             }
             
             let dataString = NSString(data: data!, encoding: NSUTF8StringEncoding)
-            print(dataString)
+            if (dataString=="Hello")
+            {
+                success=1;
+            }
+            dispatch_semaphore_signal(semaphore)
             
         }
         task.resume()
-        return 0;
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
+        return success;
     }
     func login(username:String, password:String)->Int
     {
 
-        let urlString:String = "http://www.kaleidosblog.com/tutorial/nsurlsession_tutorial.php"
-        var url:NSURL!
-        url = NSURL(string:urlString)
-        let request = NSMutableURLRequest(URL:url)
-        let body = "data=1234"
-        //编码POST数据
-        let postData = body.dataUsingEncoding(NSUTF8StringEncoding)
-        //保用 POST 提交
+        let url:NSURL = NSURL(string: "http://www.kaleidosblog.com/tutorial/nsurlsession_tutorial.php")!
+        let session = NSURLSession.sharedSession()
+        
+        let request = NSMutableURLRequest(URL: url)
         request.HTTPMethod = "POST"
-        request.HTTPBody = postData
+        request.cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringCacheData
         
-        //响应对象
-        var response:NSURLResponse?
+        let paramString = "data=Hello"
+        request.HTTPBody = paramString.dataUsingEncoding(NSUTF8StringEncoding)
+        let semaphore = dispatch_semaphore_create(0)
+        var success : Int = 0
         
-        do{
-            //发出请求
-            let received:NSData? = try NSURLConnection.sendSynchronousRequest(request,
-                returningResponse: &response)
-            let datastring = NSString(data:received!, encoding: NSUTF8StringEncoding)
-            print(datastring)
+        let task = session.dataTaskWithRequest(request) {
+            (
+            let data, let response, let error) in
             
-        }catch let error as NSError{
-            //打印错误消息
-            print(error.code)
-            print(error.description)
+            guard let _:NSData = data, let _:NSURLResponse = response  where error == nil else {
+                print("error")
+                return
+            }
+            
+            let dataString = NSString(data: data!, encoding: NSUTF8StringEncoding)
+            if (dataString=="Hello")
+            {
+                success=1;
+            }
+            dispatch_semaphore_signal(semaphore)
+            
         }
-        return 1;
+        task.resume()
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
+        return success;
     }
 }
