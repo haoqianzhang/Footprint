@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		220F25B31C05DAEC00757873 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220F25B21C05DAEC00757873 /* loginViewController.swift */; };
+		220F25B51C05E07500757873 /* back1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 220F25B41C05E07500757873 /* back1.jpg */; };
 		22EB2E461C04791200E335F5 /* dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EB2E451C04791200E335F5 /* dark.png */; };
 		22EB2E481C04791A00E335F5 /* choice.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EB2E471C04791A00E335F5 /* choice.png */; };
 		22EB2E4A1C04792000E335F5 /* go.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EB2E491C04792000E335F5 /* go.png */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		220F25B21C05DAEC00757873 /* loginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
+		220F25B41C05E07500757873 /* back1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back1.jpg; sourceTree = "<group>"; };
 		22EB2E451C04791200E335F5 /* dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dark.png; sourceTree = "<group>"; };
 		22EB2E471C04791A00E335F5 /* choice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = choice.png; sourceTree = "<group>"; };
 		22EB2E491C04792000E335F5 /* go.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = go.png; sourceTree = "<group>"; };
@@ -90,6 +94,7 @@
 				22EB2E451C04791200E335F5 /* dark.png */,
 				22EB2E491C04792000E335F5 /* go.png */,
 				22EB2E471C04791A00E335F5 /* choice.png */,
+				220F25B41C05E07500757873 /* back1.jpg */,
 			);
 			name = pic;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 				528A43121C00AA9B00C74C7C /* AppDelegate.swift */,
 				528A43141C00AA9B00C74C7C /* ViewController.swift */,
 				528A43161C00AA9B00C74C7C /* Main.storyboard */,
+				220F25B21C05DAEC00757873 /* loginViewController.swift */,
 				22EB2E4C1C04796300E335F5 /* mainViewController.swift */,
 				528A43191C00AA9B00C74C7C /* Assets.xcassets */,
 				528A431B1C00AA9B00C74C7C /* LaunchScreen.storyboard */,
@@ -256,6 +262,7 @@
 				22EB2E461C04791200E335F5 /* dark.png in Resources */,
 				528A431A1C00AA9B00C74C7C /* Assets.xcassets in Resources */,
 				528A43181C00AA9B00C74C7C /* Main.storyboard in Resources */,
+				220F25B51C05E07500757873 /* back1.jpg in Resources */,
 				22EB2E481C04791A00E335F5 /* choice.png in Resources */,
 				22EB2E4A1C04792000E335F5 /* go.png in Resources */,
 			);
@@ -286,6 +293,7 @@
 				528A43131C00AA9B00C74C7C /* AppDelegate.swift in Sources */,
 				528BDC551C049A4E007E10E3 /* trackingManager.swift in Sources */,
 				22EB2E4D1C04796300E335F5 /* mainViewController.swift in Sources */,
+				220F25B31C05DAEC00757873 /* loginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
