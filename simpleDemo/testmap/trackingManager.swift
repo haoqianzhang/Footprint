@@ -93,6 +93,7 @@ class trackingManager : NSObject, CLLocationManagerDelegate {
     func startIntervalTimer(){
         let doubleVar : Double = Double(intervalNum)
         let theTimeInterval : NSTimeInterval = doubleVar*60
+        print(theTimeInterval)
         intervalTimer = NSTimer.scheduledTimerWithTimeInterval(theTimeInterval, target: self, selector: Selector("handleTimer:"), userInfo: nil, repeats: true)
     }
     

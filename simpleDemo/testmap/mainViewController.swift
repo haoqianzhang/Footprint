@@ -55,6 +55,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         text.layer.cornerRadius = 16.5;
         
         tracking.initTracking()
+        
     }
 
     override func didReceiveMemoryWarning() {

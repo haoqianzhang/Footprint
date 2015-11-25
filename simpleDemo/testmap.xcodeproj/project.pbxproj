@@ -21,6 +21,7 @@
 		528A43281C00AA9B00C74C7C /* testmapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A43271C00AA9B00C74C7C /* testmapTests.swift */; };
 		528A43331C00AA9B00C74C7C /* testmapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A43321C00AA9B00C74C7C /* testmapUITests.swift */; };
 		528BDC551C049A4E007E10E3 /* trackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528BDC541C049A4E007E10E3 /* trackingManager.swift */; };
+		528BDC571C05E525007E10E3 /* userManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528BDC561C05E525007E10E3 /* userManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		528A43321C00AA9B00C74C7C /* testmapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testmapUITests.swift; sourceTree = "<group>"; };
 		528A43341C00AA9B00C74C7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		528BDC541C049A4E007E10E3 /* trackingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = trackingManager.swift; sourceTree = "<group>"; };
+		528BDC561C05E525007E10E3 /* userManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				528A431B1C00AA9B00C74C7C /* LaunchScreen.storyboard */,
 				528A431E1C00AA9B00C74C7C /* Info.plist */,
 				528BDC541C049A4E007E10E3 /* trackingManager.swift */,
+				528BDC561C05E525007E10E3 /* userManager.swift */,
 			);
 			path = testmap;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				528A43151C00AA9B00C74C7C /* ViewController.swift in Sources */,
 				528A43131C00AA9B00C74C7C /* AppDelegate.swift in Sources */,
 				528BDC551C049A4E007E10E3 /* trackingManager.swift in Sources */,
+				528BDC571C05E525007E10E3 /* userManager.swift in Sources */,
 				22EB2E4D1C04796300E335F5 /* mainViewController.swift in Sources */,
 				220F25B31C05DAEC00757873 /* loginViewController.swift in Sources */,
 			);
