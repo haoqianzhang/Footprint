@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		220F25B31C05DAEC00757873 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220F25B21C05DAEC00757873 /* loginViewController.swift */; };
 		220F25B51C05E07500757873 /* back1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 220F25B41C05E07500757873 /* back1.jpg */; };
+		220F25BD1C06436100757873 /* dark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 220F25BC1C06436100757873 /* dark.jpg */; };
+		2264E1511C06E10F0090157E /* gray_bubble_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2264E1501C06E10F0090157E /* gray_bubble_right@2x.png */; };
+		2264E1531C06E9850090157E /* 扇形框粗透明.png in Resources */ = {isa = PBXBuildFile; fileRef = 2264E1521C06E9850090157E /* 扇形框粗透明.png */; };
+		2264E1571C0702CD0090157E /* fan1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2264E1561C0702CD0090157E /* fan1.png */; };
+		2264E1591C0771BF0090157E /* fan2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2264E1581C0771BF0090157E /* fan2.png */; };
+		2264E15B1C0771C60090157E /* fan3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2264E15A1C0771C60090157E /* fan3.png */; };
+		2264E15F1C077DB00090157E /* signupback.png in Resources */ = {isa = PBXBuildFile; fileRef = 2264E15E1C077DB00090157E /* signupback.png */; };
+		2264E1611C077E3E0090157E /* signupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2264E1601C077E3E0090157E /* signupViewController.swift */; };
 		22EB2E461C04791200E335F5 /* dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EB2E451C04791200E335F5 /* dark.png */; };
 		22EB2E481C04791A00E335F5 /* choice.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EB2E471C04791A00E335F5 /* choice.png */; };
 		22EB2E4A1C04792000E335F5 /* go.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EB2E491C04792000E335F5 /* go.png */; };
@@ -44,6 +52,14 @@
 /* Begin PBXFileReference section */
 		220F25B21C05DAEC00757873 /* loginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		220F25B41C05E07500757873 /* back1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back1.jpg; sourceTree = "<group>"; };
+		220F25BC1C06436100757873 /* dark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dark.jpg; sourceTree = "<group>"; };
+		2264E1501C06E10F0090157E /* gray_bubble_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gray_bubble_right@2x.png"; sourceTree = "<group>"; };
+		2264E1521C06E9850090157E /* 扇形框粗透明.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "扇形框粗透明.png"; sourceTree = "<group>"; };
+		2264E1561C0702CD0090157E /* fan1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fan1.png; sourceTree = "<group>"; };
+		2264E1581C0771BF0090157E /* fan2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fan2.png; sourceTree = "<group>"; };
+		2264E15A1C0771C60090157E /* fan3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fan3.png; sourceTree = "<group>"; };
+		2264E15E1C077DB00090157E /* signupback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signupback.png; sourceTree = "<group>"; };
+		2264E1601C077E3E0090157E /* signupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signupViewController.swift; sourceTree = "<group>"; };
 		22EB2E451C04791200E335F5 /* dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dark.png; sourceTree = "<group>"; };
 		22EB2E471C04791A00E335F5 /* choice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = choice.png; sourceTree = "<group>"; };
 		22EB2E491C04792000E335F5 /* go.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = go.png; sourceTree = "<group>"; };
@@ -93,8 +109,15 @@
 		22EB2E4B1C04793800E335F5 /* pic */ = {
 			isa = PBXGroup;
 			children = (
+				2264E1501C06E10F0090157E /* gray_bubble_right@2x.png */,
+				2264E15E1C077DB00090157E /* signupback.png */,
+				2264E1581C0771BF0090157E /* fan2.png */,
 				22EB2E451C04791200E335F5 /* dark.png */,
+				2264E1561C0702CD0090157E /* fan1.png */,
 				22EB2E491C04792000E335F5 /* go.png */,
+				2264E15A1C0771C60090157E /* fan3.png */,
+				2264E1521C06E9850090157E /* 扇形框粗透明.png */,
+				220F25BC1C06436100757873 /* dark.jpg */,
 				22EB2E471C04791A00E335F5 /* choice.png */,
 				220F25B41C05E07500757873 /* back1.jpg */,
 			);
@@ -124,11 +147,12 @@
 		528A43111C00AA9B00C74C7C /* testmap */ = {
 			isa = PBXGroup;
 			children = (
+				528A43161C00AA9B00C74C7C /* Main.storyboard */,
 				22EB2E4B1C04793800E335F5 /* pic */,
 				528A43121C00AA9B00C74C7C /* AppDelegate.swift */,
 				528A43141C00AA9B00C74C7C /* ViewController.swift */,
-				528A43161C00AA9B00C74C7C /* Main.storyboard */,
 				220F25B21C05DAEC00757873 /* loginViewController.swift */,
+				2264E1601C077E3E0090157E /* signupViewController.swift */,
 				22EB2E4C1C04796300E335F5 /* mainViewController.swift */,
 				528A43191C00AA9B00C74C7C /* Assets.xcassets */,
 				528A431B1C00AA9B00C74C7C /* LaunchScreen.storyboard */,
@@ -262,11 +286,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				528A431D1C00AA9B00C74C7C /* LaunchScreen.storyboard in Resources */,
+				220F25BD1C06436100757873 /* dark.jpg in Resources */,
+				2264E1591C0771BF0090157E /* fan2.png in Resources */,
+				2264E1531C06E9850090157E /* 扇形框粗透明.png in Resources */,
+				2264E15F1C077DB00090157E /* signupback.png in Resources */,
 				22EB2E461C04791200E335F5 /* dark.png in Resources */,
 				528A431A1C00AA9B00C74C7C /* Assets.xcassets in Resources */,
 				528A43181C00AA9B00C74C7C /* Main.storyboard in Resources */,
+				2264E1511C06E10F0090157E /* gray_bubble_right@2x.png in Resources */,
 				220F25B51C05E07500757873 /* back1.jpg in Resources */,
+				2264E15B1C0771C60090157E /* fan3.png in Resources */,
 				22EB2E481C04791A00E335F5 /* choice.png in Resources */,
+				2264E1571C0702CD0090157E /* fan1.png in Resources */,
 				22EB2E4A1C04792000E335F5 /* go.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +328,7 @@
 				528BDC551C049A4E007E10E3 /* trackingManager.swift in Sources */,
 				528BDC571C05E525007E10E3 /* userManager.swift in Sources */,
 				22EB2E4D1C04796300E335F5 /* mainViewController.swift in Sources */,
+				2264E1611C077E3E0090157E /* signupViewController.swift in Sources */,
 				220F25B31C05DAEC00757873 /* loginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

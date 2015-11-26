@@ -9,8 +9,8 @@
 import UIKit
 import QuartzCore
 
-class loginViewController: UIViewController {
-
+class signupViewController: UIViewController {
+    
     
     @IBOutlet weak var usernameField:   UITextField!
     @IBOutlet weak var imageView:       UIImageView!
@@ -19,7 +19,7 @@ class loginViewController: UIViewController {
     
     var user = userManager()
     var alertView:UIAlertView?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,9 +46,9 @@ class loginViewController: UIViewController {
         let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.Dark)) as UIVisualEffectView
         visualEffectView.frame = self.view.frame
         visualEffectView.alpha = 0.5
-        imageView.image = UIImage(named: "img1.jpg")
+        imageView.image = UIImage(named: "img2.jpg")
         imageView.addSubview(visualEffectView)
-    
+        
         self.loginButton(false)
         
     }
@@ -86,24 +86,20 @@ class loginViewController: UIViewController {
         }
     }
     
-    
     @IBAction func buttonPressed(sender: AnyObject) {
-        
-        if(user.login(usernameField.text!, password: passwordField.text! ) == 1){
+        if(user.register(usernameField.text!, password: passwordField.text! ) == 1){
             succeedUIAlertView()
-            self.navigationController?.popViewControllerAnimated(true)
+            self.navigationController?.popToRootViewControllerAnimated(true)
         }
         else{
             failUIAlertView()
         }
-        
+
     }
     func succeedUIAlertView(){
         
         alertView = UIAlertView()
-        //alertView!.title = "提示"
         alertView!.message = "Succeed!"
-        //alertView!.addButtonWithTitle("点击我")
         NSTimer.scheduledTimerWithTimeInterval(2, target:self, selector:"dismiss:", userInfo:alertView!, repeats:false)
         alertView!.show()
         
@@ -121,10 +117,7 @@ class loginViewController: UIViewController {
         alertView!.show()
         
     }
-
     
-    @IBAction func signupPressed(sender: AnyObject) {
-    }
     
     
     @IBAction func backgroundPressed(sender: AnyObject) {
@@ -134,24 +127,4 @@ class loginViewController: UIViewController {
     }
 }
 
-//Extension for Color to take Hex Values
-extension UIColor{
-    
-    class func colorWithHex(hex: String, alpha: CGFloat = 1.0) -> UIColor {
-        var rgb: CUnsignedInt = 0;
-        let scanner = NSScanner(string: hex)
-        
-        if hex.hasPrefix("#") {
-            // skip '#' character
-            scanner.scanLocation = 1
-        }
-        scanner.scanHexInt(&rgb)
-        
-        let r = CGFloat((rgb & 0xFF0000) >> 16) / 255.0
-        let g = CGFloat((rgb & 0xFF00) >> 8) / 255.0
-        let b = CGFloat(rgb & 0xFF) / 255.0
-        
-        return UIColor(red: r, green: g, blue: b, alpha: alpha)
-    }
 
-}

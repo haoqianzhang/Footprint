@@ -9,14 +9,200 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "testmap/mainViewController.swift"
-            timestampString = "470060397.853716"
+            filePath = "testmap/shapedButton.swift"
+            timestampString = "470170108.766469"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "switchButton(_:)"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "setup()"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testmap/mainViewController.swift"
+            timestampString = "470262038.329902"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "mainViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "testmap.mainViewController.button2.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIButton&gt;"
+                  moduleName = "testmap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yohoo/Documents/footprint/simpleDemo/testmap/mainViewController.swift"
+                  timestampString = "470220493.268821"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "testmap.mainViewController.button2.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIButton&gt;"
+                  moduleName = "testmap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yohoo/Documents/footprint/simpleDemo/testmap/mainViewController.swift"
+                  timestampString = "470220493.274489"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "testmap.mainViewController.button2.materializeForSet : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIButton&gt;"
+                  moduleName = "testmap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yohoo/Documents/footprint/simpleDemo/testmap/mainViewController.swift"
+                  timestampString = "470220493.275102"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "29">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "testmap.mainViewController.init (testmap.mainViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; testmap.mainViewController"
+                  moduleName = "testmap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yohoo/Documents/footprint/simpleDemo/testmap/mainViewController.swift"
+                  timestampString = "470220493.275647"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "540">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "testmap.mainViewController.init (testmap.mainViewController.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;testmap.mainViewController&gt;"
+                  moduleName = "testmap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yohoo/Documents/footprint/simpleDemo/testmap/mainViewController.swift"
+                  timestampString = "470220493.275931"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "442">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testmap/mainViewController.swift"
+            timestampString = "470261598.506468"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "mainViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "testmap.mainViewController.stateButton.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIButton&gt;"
+                  moduleName = "testmap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yohoo/Documents/footprint/simpleDemo/testmap/mainViewController.swift"
+                  timestampString = "470259294.443508"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "testmap.mainViewController.stateButton.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIButton&gt;"
+                  moduleName = "testmap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yohoo/Documents/footprint/simpleDemo/testmap/mainViewController.swift"
+                  timestampString = "470259294.443889"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "testmap.mainViewController.stateButton.materializeForSet : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIButton&gt;"
+                  moduleName = "testmap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yohoo/Documents/footprint/simpleDemo/testmap/mainViewController.swift"
+                  timestampString = "470259294.444056"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "29">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "testmap.mainViewController.init (testmap.mainViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; testmap.mainViewController"
+                  moduleName = "testmap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yohoo/Documents/footprint/simpleDemo/testmap/mainViewController.swift"
+                  timestampString = "470259294.444195"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "260">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "testmap.mainViewController.init (testmap.mainViewController.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;testmap.mainViewController&gt;"
+                  moduleName = "testmap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yohoo/Documents/footprint/simpleDemo/testmap/mainViewController.swift"
+                  timestampString = "470259294.444435"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "186">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
