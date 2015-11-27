@@ -10,10 +10,11 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class ViewController: UIViewController, MKMapViewDelegate {
+class ViewController: UIViewController, MKMapViewDelegate,CLLocationManagerDelegate {
     
     @IBOutlet weak var theMap: MKMapView!
     @IBOutlet weak var theLabel: UILabel!
+    var manager: CLLocationManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,9 +24,23 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         
         theMap.delegate = self
-        theMap.mapType = MKMapType.Satellite
+        theMap.mapType = MKMapType.Standard
         theMap.showsUserLocation = true
         
+
+        manager = CLLocationManager()
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestAlwaysAuthorization()
+        manager.startUpdatingLocation()
+        
+        /*let spanX = 0.01
+        let spanY = 0.01
+        let newRegion = MKCoordinateRegion(center: theMap.userLocation.coordinate, span: MKCoordinateSpanMake(spanX, spanY))
+        theMap.setRegion(newRegion, animated: true)*/
+    }
+    
+    func locationManager(manager:CLLocationManager, didUpdateLocations locations:[CLLocation]) {
         let spanX = 0.01
         let spanY = 0.01
         let newRegion = MKCoordinateRegion(center: theMap.userLocation.coordinate, span: MKCoordinateSpanMake(spanX, spanY))
