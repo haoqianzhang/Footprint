@@ -47,15 +47,14 @@ class userManager : NSObject
     }
     func login(username:String, password:String)->Int
     {
-
-        let url:NSURL = NSURL(string: "http://www.kaleidosblog.com/tutorial/nsurlsession_tutorial.php")!
+        let url:NSURL = NSURL(string: "http://114.215.120.46/login")!
         let session = NSURLSession.sharedSession()
         
         let request = NSMutableURLRequest(URL: url)
         request.HTTPMethod = "POST"
         request.cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringCacheData
         
-        let paramString = "data=Hello"
+        let paramString = "username="+username+"&password="+password;
         request.HTTPBody = paramString.dataUsingEncoding(NSUTF8StringEncoding)
         let semaphore = dispatch_semaphore_create(0)
         var success : Int = 0
@@ -70,7 +69,7 @@ class userManager : NSObject
             }
             
             let dataString = NSString(data: data!, encoding: NSUTF8StringEncoding)
-            if (dataString=="Hello")
+            if (dataString=="yes")
             {
                 success=1;
             }
