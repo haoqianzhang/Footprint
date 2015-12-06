@@ -45,7 +45,7 @@ class userManager : NSObject
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
         return success;
     }
-    func login(username:String, password:String)->Int
+    func login(username:String, var password:String)->Int
     {
         let url:NSURL = NSURL(string: "http://114.215.120.46/login")!
         let session = NSURLSession.sharedSession()
@@ -53,9 +53,18 @@ class userManager : NSObject
         let request = NSMutableURLRequest(URL: url)
         request.HTTPMethod = "POST"
         request.cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringCacheData
+        //let paramString = "username"+username+"&password="+password
         
-        let paramString = "username="+username+"&password="+password;
-        request.HTTPBody = paramString.dataUsingEncoding(NSUTF8StringEncoding)
+        password = password.md5
+        let paramString : [String:String] = ["username": username, "password": password]
+        do {
+            request.HTTPBody = try NSJSONSerialization.dataWithJSONObject(paramString,options: [])
+            print(request.HTTPBody)
+        } catch let error as NSError {
+            let e = NSError(domain: "JSONNeverDie.JSONParseError", code: error.code, userInfo: error.userInfo)
+            print(e.localizedDescription)
+        }
+        
         let semaphore = dispatch_semaphore_create(0)
         var success : Int = 0
         
@@ -67,17 +76,48 @@ class userManager : NSObject
                 print("error")
                 return
             }
-            
-            let dataString = NSString(data: data!, encoding: NSUTF8StringEncoding)
-            if (dataString=="yes")
-            {
-                success=1;
+            var json : AnyObject!
+            do {
+                json = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments)
+            } catch let error as NSError {
+                let e = NSError(domain: "JSONNeverDie.JSONParseError", code: error.code, userInfo: error.userInfo)
+                print(e.localizedDescription)
             }
-            dispatch_semaphore_signal(semaphore)
+            //解析获取JSON字段值
+            let err = json.objectForKey("error")! as! Int
+            if(err == 0){
+                success = 1
+            }
+            else if (err == 1){
+                print("invalid username or password")
+            }
+            else if (err == 2){
+                print("system error")
+                }
             
+            let token = json.objectForKey("token")! as! String
+            print(token)
+            dispatch_semaphore_signal(semaphore)
         }
         task.resume()
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
         return success;
+    }
+}
+
+extension String  {
+    var md5: String! {
+        let str = self.cStringUsingEncoding(NSUTF8StringEncoding)
+        let strLen = CC_LONG(self.lengthOfBytesUsingEncoding(NSUTF8StringEncoding))
+        let digestLen = Int(CC_MD5_DIGEST_LENGTH)
+        let result = UnsafeMutablePointer<CUnsignedChar>.alloc(digestLen)
+        CC_MD5(str!, strLen, result)
+        let hash = NSMutableString()
+        for i in 0..<digestLen {
+            hash.appendFormat("%02x", result[i])
+        }
+        result.dealloc(digestLen)
+        return hash as String
+        //return String(format: hash)
     }
 }

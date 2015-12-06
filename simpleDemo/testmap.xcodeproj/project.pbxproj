@@ -17,6 +17,7 @@
 		2264E15B1C0771C60090157E /* fan3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2264E15A1C0771C60090157E /* fan3.png */; };
 		2264E15F1C077DB00090157E /* signupback.png in Resources */ = {isa = PBXBuildFile; fileRef = 2264E15E1C077DB00090157E /* signupback.png */; };
 		2264E1611C077E3E0090157E /* signupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2264E1601C077E3E0090157E /* signupViewController.swift */; };
+		227494511C142DC5006EFF3A /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = 227494501C142DC5006EFF3A /* test.m */; };
 		22EB2E461C04791200E335F5 /* dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EB2E451C04791200E335F5 /* dark.png */; };
 		22EB2E481C04791A00E335F5 /* choice.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EB2E471C04791A00E335F5 /* choice.png */; };
 		22EB2E4A1C04792000E335F5 /* go.png in Resources */ = {isa = PBXBuildFile; fileRef = 22EB2E491C04792000E335F5 /* go.png */; };
@@ -60,6 +61,8 @@
 		2264E15A1C0771C60090157E /* fan3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fan3.png; sourceTree = "<group>"; };
 		2264E15E1C077DB00090157E /* signupback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signupback.png; sourceTree = "<group>"; };
 		2264E1601C077E3E0090157E /* signupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signupViewController.swift; sourceTree = "<group>"; };
+		2274944F1C142DC5006EFF3A /* testmap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "testmap-Bridging-Header.h"; sourceTree = "<group>"; };
+		227494501C142DC5006EFF3A /* test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = "<group>"; };
 		22EB2E451C04791200E335F5 /* dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dark.png; sourceTree = "<group>"; };
 		22EB2E471C04791A00E335F5 /* choice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = choice.png; sourceTree = "<group>"; };
 		22EB2E491C04792000E335F5 /* go.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = go.png; sourceTree = "<group>"; };
@@ -159,6 +162,8 @@
 				528A431E1C00AA9B00C74C7C /* Info.plist */,
 				528BDC541C049A4E007E10E3 /* trackingManager.swift */,
 				528BDC561C05E525007E10E3 /* userManager.swift */,
+				227494501C142DC5006EFF3A /* test.m */,
+				2274944F1C142DC5006EFF3A /* testmap-Bridging-Header.h */,
 			);
 			path = testmap;
 			sourceTree = "<group>";
@@ -324,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				528A43151C00AA9B00C74C7C /* ViewController.swift in Sources */,
+				227494511C142DC5006EFF3A /* test.m in Sources */,
 				528A43131C00AA9B00C74C7C /* AppDelegate.swift in Sources */,
 				528BDC551C049A4E007E10E3 /* trackingManager.swift in Sources */,
 				528BDC571C05E525007E10E3 /* userManager.swift in Sources */,
@@ -471,10 +477,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = testmap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.testmap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "testmap/testmap-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -482,10 +491,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = testmap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.testmap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "testmap/testmap-Bridging-Header.h";
 			};
 			name = Release;
 		};
