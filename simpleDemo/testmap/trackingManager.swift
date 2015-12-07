@@ -16,7 +16,9 @@ class trackingManager : NSObject, CLLocationManagerDelegate {
     var mode : Int = 0
     var intervalTimer : NSTimer = NSTimer()
     var intervalNum : Int = 1
-    var xy = xyModel()
+    var xy = xyModel() //实例化xymodel，长期存在，每次清空，存进history
+    var history : [xyModel] = []    //数组存历史记录
+    
     
     func initTracking() {
         manager = CLLocationManager()
@@ -45,6 +47,7 @@ class trackingManager : NSObject, CLLocationManagerDelegate {
     
     func startTracking()
     {
+        xy.idx++    //idx不清空
         xy.startTime = xy.getStartTime()
         if mode==0
         {
@@ -67,7 +70,7 @@ class trackingManager : NSObject, CLLocationManagerDelegate {
     }
     
     func locationManager(manager:CLLocationManager, didUpdateLocations locations:[CLLocation]) {
-        xy.xys.append(locations[0]) //存在本地
+        xy.xys.append(locations[0]) //存
         print(xy.xys[xy.xys.count-1])
         if mode==2
         {
@@ -86,6 +89,14 @@ class trackingManager : NSObject, CLLocationManagerDelegate {
         manager.stopMonitoringSignificantLocationChanges()
         manager.stopUpdatingLocation()
         stopIntervalTimer()
+        
+        /* xy保存进history */
+        history.append(xy)
+        
+        /* xy的清空 */
+        xy.startTime =  ""
+        xy.xys = []
+        
     }
     
     func handleTimer(timer: NSTimer) {

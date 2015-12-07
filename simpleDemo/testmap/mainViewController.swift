@@ -46,6 +46,10 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     
     @IBOutlet weak var stateButton: UIButton!
     
+    @IBAction func uploadXY(sender: AnyObject) {
+        print("!!!")
+        //填写上传坐标
+    }
     var press : Bool = true
     @IBAction func pressDown(sender: AnyObject) {
 
@@ -60,6 +64,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, MKMapView
             print("notpress")
         }
         else{
+            
             stateButton.alpha = 0.1
             if opt==0
             {

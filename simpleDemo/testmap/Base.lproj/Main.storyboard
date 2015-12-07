@@ -125,6 +125,7 @@
                                         <rect key="frame" x="170" y="3" width="142" height="127"/>
                                         <animations/>
                                         <connections>
+                                            <action selector="uploadXY:" destination="0vJ-d2-mVB" eventType="touchUpInside" id="mBv-PR-8l8"/>
                                             <segue destination="BYZ-38-t0r" kind="push" id="gzt-69-Zxs"/>
                                         </connections>
                                     </button>
