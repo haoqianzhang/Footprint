@@ -45,22 +45,20 @@ class userManager : NSObject
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
         return success;
     }
+    
     func login(username:String, var password:String)->Int
     {
         let url:NSURL = NSURL(string: "http://114.215.120.46/login")!
         let session = NSURLSession.sharedSession()
-        
         let request = NSMutableURLRequest(URL: url)
         request.HTTPMethod = "POST"
         request.cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringCacheData
-        //let paramString = "username"+username+"&password="+password
-        
-        password = password.md5
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")    //重要
+        password = password.md5 //md5加密
         let paramString : [String:String] = ["username": username, "password": password]
         do {
-            request.HTTPBody = try NSJSONSerialization.dataWithJSONObject(paramString,options: [])
-            print(request.HTTPBody)
-        } catch let error as NSError {
+             request.HTTPBody = try NSJSONSerialization.dataWithJSONObject(paramString,options:NSJSONWritingOptions.PrettyPrinted)  //打包json数据
+        } catch let error as NSError {  //处理错误
             let e = NSError(domain: "JSONNeverDie.JSONParseError", code: error.code, userInfo: error.userInfo)
             print(e.localizedDescription)
         }
@@ -78,7 +76,7 @@ class userManager : NSObject
             }
             var json : AnyObject!
             do {
-                json = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments)
+                json = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments)  //解析json数据
             } catch let error as NSError {
                 let e = NSError(domain: "JSONNeverDie.JSONParseError", code: error.code, userInfo: error.userInfo)
                 print(e.localizedDescription)
@@ -105,6 +103,7 @@ class userManager : NSObject
     }
 }
 
+//md5
 extension String  {
     var md5: String! {
         let str = self.cStringUsingEncoding(NSUTF8StringEncoding)

@@ -16,7 +16,7 @@ class trackingManager : NSObject, CLLocationManagerDelegate {
     var mode : Int = 0
     var intervalTimer : NSTimer = NSTimer()
     var intervalNum : Int = 1
-    
+   
     func initTracking() {
         manager = CLLocationManager()
         manager.delegate = self
@@ -65,7 +65,7 @@ class trackingManager : NSObject, CLLocationManagerDelegate {
     
     func locationManager(manager:CLLocationManager, didUpdateLocations locations:[CLLocation]) {
         print("\(locations[0])")
-        
+                
         if mode==2
         {
             manager.stopUpdatingLocation()

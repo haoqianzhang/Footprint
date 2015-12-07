@@ -106,6 +106,9 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, MKMapView
   
    
     @IBOutlet weak var viewA: UIView!
+    
+    @IBOutlet weak var viewB: UIView!
+    
     @IBOutlet weak var text: UITextField!
     
     @IBOutlet weak var button1: UIButton!
@@ -120,6 +123,12 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         //Marion-Italic
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 66.0/255.0, green: 81.0/255.0, blue: 94.0/255.0, alpha: 0.5), NSFontAttributeName: UIFont(name: "Chalkduster", size: 24.0)!] //设置title
         text.layer.cornerRadius = 16.5
+        
+        //添加屏幕点击事件
+        viewA.userInteractionEnabled = true
+        let singleTap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "ViewTouch")
+        viewA.addGestureRecognizer(singleTap)
+
         
         tracking.initTracking()
         
@@ -155,7 +164,9 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         
     }
     
- 
+    func ViewTouch(){    //点击屏幕输入法消失
+        text.resignFirstResponder()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

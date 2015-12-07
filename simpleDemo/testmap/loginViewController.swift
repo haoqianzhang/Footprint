@@ -23,26 +23,33 @@ class loginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 239/255.0, green: 239/255.0, blue: 239/255.0, alpha: 1.0) //设置navigation bar背景色
-        //Marion-Italic
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 66.0/255.0, green: 81.0/255.0, blue: 94.0/255.0, alpha: 0.5), NSFontAttributeName: UIFont(name: "Chalkduster", size: 24.0)!] //设置title
+        //设置navigation bar
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 239/255.0, green: 239/255.0, blue: 239/255.0, alpha: 1.0)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 66.0/255.0, green: 81.0/255.0, blue: 94.0/255.0, alpha: 0.5), NSFontAttributeName: UIFont(name: "Chalkduster", size: 24.0)!]
+        
         loginButton.layer.cornerRadius = 16.5
         usernameField.alpha = 0;
         passwordField.alpha = 0;
         loginButton.alpha   = 0;
         
+        //控件的渐入效果
         UIView.animateWithDuration(0.7, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
             self.usernameField.alpha = 1.0
             self.passwordField.alpha = 1.0
             self.loginButton.alpha   = 0.9
             }, completion: nil)
         
-        // Notifiying for Changes in the textFields
+        //添加屏幕点击事件
+        imageView.userInteractionEnabled = true
+        let singleTap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "imageViewTouch")
+        imageView .addGestureRecognizer(singleTap)
+        
+        //监控textFields的变化
         usernameField.addTarget(self, action: "textFieldDidChange", forControlEvents: UIControlEvents.EditingChanged)
         passwordField.addTarget(self, action: "textFieldDidChange", forControlEvents: UIControlEvents.EditingChanged)
         
         
-        // Visual Effect View for background
+        //背景模糊特效
         let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.Dark)) as UIVisualEffectView
         visualEffectView.frame = self.view.frame
         visualEffectView.alpha = 0.5
@@ -101,9 +108,7 @@ class loginViewController: UIViewController {
     func succeedUIAlertView(){
         
         alertView = UIAlertView()
-        //alertView!.title = "提示"
         alertView!.message = "Succeed!"
-        //alertView!.addButtonWithTitle("点击我")
         NSTimer.scheduledTimerWithTimeInterval(2, target:self, selector:"dismiss:", userInfo:alertView!, repeats:false)
         alertView!.show()
         
@@ -126,12 +131,12 @@ class loginViewController: UIViewController {
     @IBAction func signupPressed(sender: AnyObject) {
     }
     
-    
-    @IBAction func backgroundPressed(sender: AnyObject) {
+    func imageViewTouch(){    //点击屏幕输入法消失
         usernameField.resignFirstResponder()
         passwordField.resignFirstResponder()
         
     }
+    
 }
 
 //Extension for Color to take Hex Values
