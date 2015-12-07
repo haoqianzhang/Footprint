@@ -34,11 +34,6 @@ class ViewController: UIViewController, MKMapViewDelegate,CLLocationManagerDeleg
         manager.requestAlwaysAuthorization()
         manager.startUpdatingLocation()
         
-        /*let spanX = 0.01
-        let spanY = 0.01
-        let newRegion = MKCoordinateRegion(center: theMap.userLocation.coordinate, span: MKCoordinateSpanMake(spanX, spanY))
-        theMap.setRegion(newRegion, animated: true)*/
-    }
     
     func locationManager(manager:CLLocationManager, didUpdateLocations locations:[CLLocation]) {
         let spanX = 0.01
@@ -48,4 +43,4 @@ class ViewController: UIViewController, MKMapViewDelegate,CLLocationManagerDeleg
     }
     
 }
-
+}

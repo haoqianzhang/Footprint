@@ -16,12 +16,14 @@ class trackingManager : NSObject, CLLocationManagerDelegate {
     var mode : Int = 0
     var intervalTimer : NSTimer = NSTimer()
     var intervalNum : Int = 1
-   
+    var xy = xyModel()
+    
     func initTracking() {
         manager = CLLocationManager()
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.requestAlwaysAuthorization()
+        
     }
     
     func anytimeMode()
@@ -43,6 +45,7 @@ class trackingManager : NSObject, CLLocationManagerDelegate {
     
     func startTracking()
     {
+        xy.startTime = xy.getStartTime()
         if mode==0
         {
             manager.stopMonitoringSignificantLocationChanges()
@@ -64,8 +67,8 @@ class trackingManager : NSObject, CLLocationManagerDelegate {
     }
     
     func locationManager(manager:CLLocationManager, didUpdateLocations locations:[CLLocation]) {
-        print("\(locations[0])")
-                
+        xy.xys.append(locations[0]) //存在本地
+        print(xy.xys[xy.xys.count-1])
         if mode==2
         {
             manager.stopUpdatingLocation()

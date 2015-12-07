@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testmap/mainViewController.swift"
-            timestampString = "471179462.890557"
+            timestampString = "471181574.430641"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "mainViewController"
             landmarkType = "3">
             <Locations>
@@ -119,11 +119,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testmap/mainViewController.swift"
-            timestampString = "470261598.506468"
+            timestampString = "471181574.430641"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "mainViewController"
             landmarkType = "3">
             <Locations>

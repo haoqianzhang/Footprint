@@ -10,6 +10,7 @@
 		220F25B31C05DAEC00757873 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220F25B21C05DAEC00757873 /* loginViewController.swift */; };
 		220F25B51C05E07500757873 /* back1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 220F25B41C05E07500757873 /* back1.jpg */; };
 		220F25BD1C06436100757873 /* dark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 220F25BC1C06436100757873 /* dark.jpg */; };
+		2245CB791C15A31C00068392 /* xyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245CB781C15A31C00068392 /* xyModel.swift */; };
 		2264E1511C06E10F0090157E /* gray_bubble_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2264E1501C06E10F0090157E /* gray_bubble_right@2x.png */; };
 		2264E1531C06E9850090157E /* 扇形框粗透明.png in Resources */ = {isa = PBXBuildFile; fileRef = 2264E1521C06E9850090157E /* 扇形框粗透明.png */; };
 		2264E1571C0702CD0090157E /* fan1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2264E1561C0702CD0090157E /* fan1.png */; };
@@ -54,6 +55,7 @@
 		220F25B21C05DAEC00757873 /* loginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		220F25B41C05E07500757873 /* back1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back1.jpg; sourceTree = "<group>"; };
 		220F25BC1C06436100757873 /* dark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dark.jpg; sourceTree = "<group>"; };
+		2245CB781C15A31C00068392 /* xyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = xyModel.swift; sourceTree = "<group>"; };
 		2264E1501C06E10F0090157E /* gray_bubble_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gray_bubble_right@2x.png"; sourceTree = "<group>"; };
 		2264E1521C06E9850090157E /* 扇形框粗透明.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "扇形框粗透明.png"; sourceTree = "<group>"; };
 		2264E1561C0702CD0090157E /* fan1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fan1.png; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				528A431B1C00AA9B00C74C7C /* LaunchScreen.storyboard */,
 				528A431E1C00AA9B00C74C7C /* Info.plist */,
 				528BDC541C049A4E007E10E3 /* trackingManager.swift */,
+				2245CB781C15A31C00068392 /* xyModel.swift */,
 				528BDC561C05E525007E10E3 /* userManager.swift */,
 				227494501C142DC5006EFF3A /* test.m */,
 				2274944F1C142DC5006EFF3A /* testmap-Bridging-Header.h */,
@@ -334,6 +337,7 @@
 				528BDC551C049A4E007E10E3 /* trackingManager.swift in Sources */,
 				528BDC571C05E525007E10E3 /* userManager.swift in Sources */,
 				22EB2E4D1C04796300E335F5 /* mainViewController.swift in Sources */,
+				2245CB791C15A31C00068392 /* xyModel.swift in Sources */,
 				2264E1611C077E3E0090157E /* signupViewController.swift in Sources */,
 				220F25B31C05DAEC00757873 /* loginViewController.swift in Sources */,
 			);
