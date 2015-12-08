@@ -10,17 +10,23 @@ import Foundation
 
 class userManager : NSObject
 {
-    func register(username:String, password:String)->Int
+    func register(username:String, var password:String)->Int
     {
-        let url:NSURL = NSURL(string: "http://www.kaleidosblog.com/tutorial/nsurlsession_tutorial.php")!
+        let url:NSURL = NSURL(string: "http://114.215.120.46/reg")!
         let session = NSURLSession.sharedSession()
-        
         let request = NSMutableURLRequest(URL: url)
         request.HTTPMethod = "POST"
         request.cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringCacheData
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        password = password.md5 //md5加密
+        let paramString : [String:String] = ["username": username, "password": password]
+        do {
+            request.HTTPBody = try NSJSONSerialization.dataWithJSONObject(paramString,options:NSJSONWritingOptions.PrettyPrinted)  //打包json数据
+        } catch let error as NSError {  //处理错误
+            let e = NSError(domain: "JSONNeverDie.JSONParseError", code: error.code, userInfo: error.userInfo)
+            print(e.localizedDescription)
+        }
         
-        let paramString = "data=Hello"
-        request.HTTPBody = paramString.dataUsingEncoding(NSUTF8StringEncoding)
         let semaphore = dispatch_semaphore_create(0)
         var success : Int = 0
         
@@ -32,19 +38,36 @@ class userManager : NSObject
                 print("error")
                 return
             }
-            
-            let dataString = NSString(data: data!, encoding: NSUTF8StringEncoding)
-            if (dataString=="Hello")
-            {
-                success=1;
+            var json : AnyObject!
+            do {
+                json = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments)  //解析json数据
+            } catch let error as NSError {
+                let e = NSError(domain: "JSONNeverDie.JSONParseError", code: error.code, userInfo: error.userInfo)
+                print(e.localizedDescription)
             }
-            dispatch_semaphore_signal(semaphore)
+            //解析获取JSON字段值
+            let err = json.objectForKey("error")! as! Int
+            if(err == 0){
+                success = 1
+            }
+            else if (err == 1){
+                print("this username has been registered")
+            }
+            else if (err == 2){
+                print("system error")
+            }
             
+            let token = json.objectForKey("token")! as! String
+            print(token)
+            dispatch_semaphore_signal(semaphore)
         }
         task.resume()
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
         return success;
     }
+
+    
+
     
     func login(username:String, var password:String)->Int
     {
